@@ -148,7 +148,6 @@
             gap: 8px;
         }
 
-        /* ستایلی نوێ بۆ دوگمەی لوکەیشن لە فووتەر */
         .btn-location {
             background: #222;
             border: 1px solid var(--gold);
@@ -263,6 +262,20 @@
 <script>
     let cart = {};
     let userLocation = "";
+
+    // ئەم بەشە بۆ ڕیسێتکردنەوەی خۆکار کاتێک کڕیار لە ئەپەکە دەچێتە دەرەوە
+    document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === 'hidden') {
+            setTimeout(function() {
+                location.reload(); 
+            }, 1000);
+        }
+    });
+
+    window.onload = function() {
+        cart = {};
+        update();
+    };
 
     function getLoc() {
         if (navigator.geolocation) {
