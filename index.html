@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>خواردنگەی یوسف | مێنۆی ڕێکخراو</title>
     
     <link rel="icon" type="image/png" href="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/5afaaab5-5507-4172-aad1-747d4296389d.png">
@@ -21,6 +22,10 @@
             --tk-red: #ff0050;
             --tk-blue: #00f2ea;
         }
+
+        /* لادانی شریتی وەرگێڕانی گووگڵ ئەگەر دەرکەوت */
+        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+        body { top: 0px !important; }
 
         body {
             font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -259,7 +264,7 @@
     <div class="item" data-name="پیتزای دبل" data-price="5000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
         <div class="item-info"><span class="item-name">پیتزای دبل</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
     <div class="item" data-name="بچوک بە گوشت" data-price="4000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
@@ -363,7 +368,7 @@
             return; 
         }
         
-        // بەکارهێنانی لینکی فەرمی Waze بۆ ئەوەی ڕاستەوخۆ بەرنامەکە بکاتەوە
+        // بەکارهێنانی لینکی فەرمی Waze بۆ ئەوەی ڕاستەوخۆ بەرنامەکە بکاتەوە و کێشە دروست نەکات
         let wazeLink = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
         
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
