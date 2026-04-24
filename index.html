@@ -263,7 +263,7 @@
     let cart = {};
     let userLocation = "";
 
-    // ئەم بەشە بۆ ڕیسێتکردنەوەی خۆکار کاتێک کڕیار لە ئەپەکە دەچێتە دەرەوە
+    // Reset ئەپەکە کاتێک کڕیار لێی دەچێتە دەرەوە
     document.addEventListener("visibilitychange", function() {
         if (document.visibilityState === 'hidden') {
             setTimeout(function() {
@@ -280,14 +280,22 @@
     function getLoc() {
         if (navigator.geolocation) {
             document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
+            
+            // خێراکردنی وەرگرتنی لوکەیشن بە دیاریکردنی کاتی کۆتایی (5 چرکە)
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            };
+
             navigator.geolocation.getCurrentPosition(function(position) {
                 userLocation = "https://www.google.com/maps?q=" + position.coords.latitude + "," + position.coords.longitude;
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
                 document.getElementById('loc-btn').classList.add('active');
-            }, function() {
-                alert("تکایە GPS مۆبایلەکەت بکەرەوە");
+            }, function(error) {
+                alert("تکایە GPS چالاک بکە یان کەمێک بوەستە و دووبارە تاقی بکەرەوە.");
                 document.getElementById('loc-btn').innerText = "📍 لوکەیشن";
-            });
+            }, options);
         }
     }
 
