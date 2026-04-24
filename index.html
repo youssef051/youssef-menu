@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خواردنگەی یوسف | مێنۆی ڕێکخراو</title>
+    
+    <link rel="icon" type="image/png" href="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/4c984a19-6f50-4137-aec2-d26e9dd9805d.png">
+    <link rel="apple-touch-icon" href="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/4c984a19-6f50-4137-aec2-d26e9dd9805d.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <style>
         :root {
             --gold: #d4af37;
@@ -11,6 +18,8 @@
             --card: #161616;
             --white: #ffffff;
             --section-bg: #1f1f1f;
+            --tk-red: #ff0050;
+            --tk-blue: #00f2ea;
         }
 
         body {
@@ -18,7 +27,7 @@
             background-color: var(--bg);
             color: var(--white);
             margin: 0;
-            padding-bottom: 120px;
+            padding-bottom: 230px; 
             direction: rtl;
         }
 
@@ -38,7 +47,6 @@
 
         .container { padding: 15px; max-width: 500px; margin: auto; }
 
-        /* تایتڵی بەشەکان */
         .category-header {
             background: var(--section-bg);
             color: var(--gold);
@@ -51,7 +59,6 @@
             align-items: center;
             gap: 10px;
             border-right: 5px solid var(--gold);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .item {
@@ -61,7 +68,6 @@
             padding: 10px;
             margin-bottom: 12px;
             border: 1px solid #252525;
-            transition: 0.3s;
         }
 
         .item img { width: 85px; height: 85px; border-radius: 10px; object-fit: cover; }
@@ -86,23 +92,57 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            background: rgba(15, 15, 15, 0.98);
-            border-top: 2px solid var(--gold);
-            padding: 15px 25px;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(15px);
+            border-top: 1.5px solid rgba(212, 175, 55, 0.2);
+            padding: 15px 25px 40px 25px; 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .tiktok-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 15px;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.05rem;
+            border: none;
+            background: linear-gradient(270deg, #000000, var(--tk-red), #000000, var(--tk-blue));
+            background-size: 600% 600%;
+            animation: animateGradient 6s ease infinite;
+            box-shadow: 0 0 15px rgba(255, 0, 80, 0.3);
+        }
+
+        @keyframes animateGradient {
+            0% { background-position: 0% 50%; box-shadow: 0 0 15px rgba(255, 0, 80, 0.4); }
+            50% { background-position: 100% 50%; box-shadow: 0 0 15px rgba(0, 242, 234, 0.4); }
+            100% { background-position: 0% 50%; box-shadow: 0 0 15px rgba(255, 0, 80, 0.4); }
+        }
+
+        .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-sizing: border-box;
-            z-index: 1000;
+            width: 100%;
         }
 
         .btn-order {
-            background: #25d366;
+            background: linear-gradient(135deg, #25d366, #075e54);
             color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
+            padding: 12px 35px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
         }
     </style>
 </head>
@@ -116,83 +156,64 @@
 <div class="container">
     
     <div class="category-header">🥘 بەشی لحم بالعجين</div>
-
     <div class="item" data-name="لحم بالعجين عادي" data-price="1250">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/8c25120e-eb24-4900-8dba-be5400a4467d.jpg">
-        <div class="item-info">
-            <span class="item-name">لحم بالعجين عادي</span>
-            <span class="item-price">١,٢٥٠ د.ع</span>
-        </div>
-        <div class="controls">
-            <button class="btn-qty" onclick="change(this, -1)">-</button>
-            <span class="qty">0</span>
-            <button class="btn-qty" onclick="change(this, 1)">+</button>
-        </div>
+        <div class="item-info"><span class="item-name">لحم بالعجين عادي</span><span class="item-price">١,٢٥٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
     <div class="item" data-name="لحم بالعجين دبل" data-price="2500">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/8c25120e-eb24-4900-8dba-be5400a4467d.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين دبل</span><span class="item-price">٢,٥٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
-    <div class="item" data-name="لحم بالعجين عادي بە هێلکە" data-price="1500">
+    <div class="item" data-name="عادی بە هێلکە" data-price="1500">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/b5811126-2180-4714-9645-6c1c82040050.jpg">
         <div class="item-info"><span class="item-name">عادی بە هێلکە</span><span class="item-price">١,٥٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
-    <div class="item" data-name="لحم بالعجين دبل بە هێلکە" data-price="2750">
+    <div class="item" data-name="دبل بە هێلکە" data-price="2750">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/b5811126-2180-4714-9645-6c1c82040050.jpg">
         <div class="item-info"><span class="item-name">دبل بە هێلکە</span><span class="item-price">٢,٧٥٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
-    <div class="item" data-name="لحم بالعجين عادي بە پەنیر" data-price="2000">
+    <div class="item" data-name="عادی بە پەنیر" data-price="2000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/bcba7549-1cce-4268-8226-9196a1e8e057.jpg">
         <div class="item-info"><span class="item-name">عادی بە پەنیر</span><span class="item-price">٢,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
-    <div class="item" data-name="لحم بالعجين دبل بە پەنیر" data-price="3500">
+    <div class="item" data-name="دبل بە پەنیر" data-price="3500">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/bcba7549-1cce-4268-8226-9196a1e8e057.jpg">
         <div class="item-info"><span class="item-name">دبل بە پەنیر</span><span class="item-price">٣,٥٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
 
     <div class="category-header">🍕 بەشی پیتزا</div>
-
     <div class="item" data-name="پیتزای قومبەلە" data-price="10000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/4aae953f-d8e7-4b85-a2ac-9f1487efbf89.jpg">
         <div class="item-info"><span class="item-name">پیتزای قومبەلە</span><span class="item-price">١٠,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
     <div class="item" data-name="پیتزای نیو قومبەلە" data-price="5000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/4aae953f-d8e7-4b85-a2ac-9f1487efbf89.jpg">
         <div class="item-info"><span class="item-name">پیتزای نیو قومبەلە</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
     <div class="item" data-name="پیتزای بچوک" data-price="3000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
         <div class="item-info"><span class="item-name">پیتزای بچوک</span><span class="item-price">٣,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
     <div class="item" data-name="پیتزای دبل" data-price="5000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
         <div class="item-info"><span class="item-name">پیتزای دبل</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
-    <div class="item" data-name="پیتزای بچوک بە گوشت" data-price="4000">
+    <div class="item" data-name="بچوک بە گوشت" data-price="4000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
         <div class="item-info"><span class="item-name">بچوک بە گوشت</span><span class="item-price">٤,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
-
-    <div class="item" data-name="پیتزای دبل بە گوشت" data-price="6000">
+    <div class="item" data-name="دبل بە گوشت" data-price="6000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
         <div class="item-info"><span class="item-name">دبل بە گوشت</span><span class="item-price">٦,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
@@ -201,11 +222,18 @@
 </div>
 
 <div class="footer">
-    <div style="display:flex; flex-direction:column;">
-        <span style="font-size:0.8rem; opacity:0.7;">کۆی گشتی</span>
-        <span id="total" style="font-size:1.3rem; color:var(--gold); font-weight:bold;">0 د.ع</span>
+    <a href="https://www.tiktok.com/@pizza.youssef?_r=1&_t=ZS-95nDjNBNv9h" target="_blank" class="tiktok-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.36-.72.5-.99 1.43-1.09 2.26-.13 1.27.31 2.53 1.29 3.29.96.8 2.27.93 3.43.51 1.1-.4 1.93-1.44 2.22-2.57.17-.65.25-1.33.23-2.01V.02z"/></svg>
+        <span>سەردانی تیکتۆکەکەمان بکە</span>
+    </a>
+
+    <div class="footer-bottom">
+        <div style="display:flex; flex-direction:column;">
+            <span style="font-size:0.8rem; opacity:0.7;">کۆی گشتی</span>
+            <span id="total" style="font-size:1.4rem; color:var(--gold); font-weight:bold;">0 د.ع</span>
+        </div>
+        <a href="javascript:void(0)" class="btn-order" onclick="send()">💬 ناردنی داواکاری</a>
     </div>
-    <a href="javascript:void(0)" class="btn-order" onclick="send()">💬 ناردنی داواکاری</a>
 </div>
 
 <script>
