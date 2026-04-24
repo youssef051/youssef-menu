@@ -263,7 +263,6 @@
     let cart = {};
     let userLocation = "";
 
-    // Reset ئەپەکە کاتێک کڕیار لێی دەچێتە دەرەوە
     document.addEventListener("visibilitychange", function() {
         if (document.visibilityState === 'hidden') {
             setTimeout(function() {
@@ -281,11 +280,11 @@
         if (navigator.geolocation) {
             document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
             
-            // خێراکردنی وەرگرتنی لوکەیشن بە دیاریکردنی کاتی کۆتایی (5 چرکە)
+            // ئەم بەشەمان خێرا کردووە
             const options = {
-                enableHighAccuracy: true,
-                timeout: 5000,
-                maximumAge: 0
+                enableHighAccuracy: false, // نەکردنی بە High بۆ ئەوەی خێراتر بێت
+                timeout: 4000,             // تەنها 4 چرکە دەوەستێت
+                maximumAge: 10000          
             };
 
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -293,7 +292,7 @@
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
                 document.getElementById('loc-btn').classList.add('active');
             }, function(error) {
-                alert("تکایە GPS چالاک بکە یان کەمێک بوەستە و دووبارە تاقی بکەرەوە.");
+                alert("تکایە دڵنیابەرەوە GPS چالاکە و ئینتەرنێتەکەت باشە، پاشان دووبارە تاقی بکەرەوە.");
                 document.getElementById('loc-btn').innerText = "📍 لوکەیشن";
             }, options);
         }
@@ -317,7 +316,7 @@
     }
     function send() {
         if (Object.keys(cart).length === 0) { alert("تکایە خواردنێک دیاری بکە!"); return; }
-        if (!userLocation) { alert("تکایە سەرەتا دوگمەی لوکەیشن دابگرە بۆ ناردنی شوێنەکەت"); return; }
+        if (!userLocation) { alert("تکایە سەرەتا دوگمەی لوکەیشن دابگرە"); return; }
         
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) { msg += `▫️ ${name} (${cart[name].qty} دانە)\n`; }
