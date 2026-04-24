@@ -259,7 +259,7 @@
     <div class="item" data-name="پیتزای دبل" data-price="5000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
         <div class="item-info"><span class="item-name">پیتزای دبل</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
     <div class="item" data-name="بچوک بە گوشت" data-price="4000">
         <img src="https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/26c8726b-3830-4aa3-a850-e0a31f2471cd.jpg">
@@ -363,13 +363,13 @@
             return; 
         }
         
-        // دروستکردنی لینکی گوگڵ ماپ بۆ ئەوەی واتسئەپ کێشەی بۆ دروست نەکات
-        let mapLink = `https://www.google.com/maps?q=${lat},${lon}`;
+        // بەکارهێنانی لینکی فەرمی Waze بۆ ئەوەی ڕاستەوخۆ بەرنامەکە بکاتەوە
+        let wazeLink = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
         
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) { msg += `▫️ ${name} (${cart[name].qty} دانە)\n`; }
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
-        msg += `\n📍 *لینکی لوکەیشن:*\n${mapLink}`;
+        msg += `\n📍 *لینکی لوکەیشن (Waze):*\n${wazeLink}`;
         
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
