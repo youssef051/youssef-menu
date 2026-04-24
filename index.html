@@ -83,7 +83,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            /* جێگیرکردنی ئاراستەی ژمارەکان */
             direction: ltr; 
         }
 
@@ -353,6 +352,13 @@
 </div> 
 
 <script>
+    // بەشی رێفرێش لە کاتی گەڕانەوە بۆ ناو ئەپەکە
+    document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === "visible") {
+            location.reload();
+        }
+    });
+
     function updateDateTime() {
         const now = new Date();
         const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
