@@ -272,9 +272,9 @@
         if (navigator.geolocation) {
             document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
             
-            // لابردنی هەموو سنوورێکی کاتی بۆ ئەوەی خێرا وەڵام بداتەوە
             navigator.geolocation.getCurrentPosition(function(position) {
-                userLocation = "https://www.google.com/maps?q=" + position.coords.latitude + "," + position.coords.longitude;
+                // گۆڕینی فۆرماتی لوکەیشن بۆ Waze
+                userLocation = "https://waze.com/ul?ll=" + position.coords.latitude + "," + position.coords.longitude + "&navigate=yes";
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
                 document.getElementById('loc-btn').classList.add('active');
             }, function(error) {
@@ -309,7 +309,7 @@
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) { msg += `▫️ ${name} (${cart[name].qty} دانە)\n`; }
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
-        msg += `\n📍 *لوکەیشن:* ${userLocation}`;
+        msg += `\n📍 *لینکی لوکەیشن (Waze):*\n${userLocation}`;
         
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
