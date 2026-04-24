@@ -115,7 +115,7 @@
 <header>
     <div class="visitor-badge">
         <div class="visitor-dot"></div>
-        <span>بەژداربووان: <b id="visitor-count">٠</b></span>
+        <span>بەژداربووان: <b id="visitor-count">٣٠٠</b></span>
     </div>
     <h1>خواردنگەی یوسف</h1>
     <p>باشترین تام و کوالێتی</p>
@@ -220,22 +220,25 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         updateDateTime();
-        getRealVisitors();
+        startVisitorCounter();
     });
 
-    function getRealVisitors() {
-        const apiURL = "https://api.countapi.xyz/hit/yousef-rest-2026-v2/visits";
+    function startVisitorCounter() {
+        // دیاریکردنی ژمارەیەکی سەرەتایی لە نێوان ٣٢٠ بۆ ٣٨٠
+        let count = Math.floor(Math.random() * (380 - 320 + 1)) + 320;
+        document.getElementById('visitor-count').innerText = count.toLocaleString();
 
-        fetch(apiURL)
-            .then(response => response.json())
-            .then(data => {
-                let baseCount = 0;
-                let totalVisits = data.value + baseCount;
-                document.getElementById('visitor-count').innerText = totalVisits.toLocaleString();
-            })
-            .catch(error => {
-                document.getElementById('visitor-count').innerText = "0";
-            });
+        // گۆڕانکاری لە ژمارەکە هەموو چوار چرکە جارێک
+        setInterval(() => {
+            let change = Math.floor(Math.random() * 5) - 2; // یان زیاد دەکات یان کەم (-2 تا +2)
+            count += change;
+            
+            // ئەگەر لە ٣٠٠ کەمتر بوو یان لە ٤٠٠ زیاتر، با بگەڕێتەوە ناو مەوداکە
+            if (count < 300) count = 310;
+            if (count > 400) count = 390;
+            
+            document.getElementById('visitor-count').innerText = count.toLocaleString();
+        }, 4000);
     }
 
     function updateDateTime() {
