@@ -1,0 +1,15 @@
+{
+  "name": "خواردنگەی یوسف",
+  "short_name": "Yousef",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/4c984a19-6f50-4137-aec2-d26e9dd9805d.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
