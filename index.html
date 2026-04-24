@@ -263,14 +263,6 @@
     let cart = {};
     let userLocation = "";
 
-    document.addEventListener("visibilitychange", function() {
-        if (document.visibilityState === 'hidden') {
-            setTimeout(function() {
-                location.reload(); 
-            }, 1000);
-        }
-    });
-
     window.onload = function() {
         cart = {};
         update();
@@ -280,21 +272,15 @@
         if (navigator.geolocation) {
             document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
             
-            // ئەم بەشەمان خێرا کردووە
-            const options = {
-                enableHighAccuracy: false, // نەکردنی بە High بۆ ئەوەی خێراتر بێت
-                timeout: 4000,             // تەنها 4 چرکە دەوەستێت
-                maximumAge: 10000          
-            };
-
+            // لابردنی هەموو سنوورێکی کاتی بۆ ئەوەی خێرا وەڵام بداتەوە
             navigator.geolocation.getCurrentPosition(function(position) {
                 userLocation = "https://www.google.com/maps?q=" + position.coords.latitude + "," + position.coords.longitude;
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
                 document.getElementById('loc-btn').classList.add('active');
             }, function(error) {
-                alert("تکایە دڵنیابەرەوە GPS چالاکە و ئینتەرنێتەکەت باشە، پاشان دووبارە تاقی بکەرەوە.");
+                alert("تکایە دڵنیابەرەوە GPS چالاکە.");
                 document.getElementById('loc-btn').innerText = "📍 لوکەیشن";
-            }, options);
+            }, { enableHighAccuracy: true });
         }
     }
 
@@ -309,11 +295,13 @@
         if (current > 0) { cart[name] = { qty: current, price: price }; } else { delete cart[name]; }
         update();
     }
+
     function update() {
         let total = 0;
         for (let k in cart) total += cart[k].qty * cart[k].price;
         document.getElementById('total').innerText = total.toLocaleString() + " د.ع";
     }
+
     function send() {
         if (Object.keys(cart).length === 0) { alert("تکایە خواردنێک دیاری بکە!"); return; }
         if (!userLocation) { alert("تکایە سەرەتا دوگمەی لوکەیشن دابگرە"); return; }
