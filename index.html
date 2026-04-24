@@ -138,11 +138,31 @@
         .btn-order {
             background: linear-gradient(135deg, #25d366, #075e54);
             color: white;
-            padding: 12px 35px;
+            padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ستایلی نوێ بۆ دوگمەی لوکەیشن لە فووتەر */
+        .btn-location {
+            background: #222;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-location.active {
+            background: var(--gold);
+            color: #000;
         }
     </style>
 </head>
@@ -232,12 +252,32 @@
             <span style="font-size:0.8rem; opacity:0.7;">کۆی گشتی</span>
             <span id="total" style="font-size:1.4rem; color:var(--gold); font-weight:bold;">0 د.ع</span>
         </div>
-        <a href="javascript:void(0)" class="btn-order" onclick="send()">💬 ناردنی داواکاری</a>
+        
+        <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn-location" id="loc-btn" onclick="getLoc()">📍 لوکەیشن</button>
+            <a href="javascript:void(0)" class="btn-order" onclick="send()">💬 داواکاری</a>
+        </div>
     </div>
 </div>
 
 <script>
     let cart = {};
+    let userLocation = "";
+
+    function getLoc() {
+        if (navigator.geolocation) {
+            document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
+            navigator.geolocation.getCurrentPosition(function(position) {
+                userLocation = "https://www.google.com/maps?q=" + position.coords.latitude + "," + position.coords.longitude;
+                document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
+                document.getElementById('loc-btn').classList.add('active');
+            }, function() {
+                alert("تکایە GPS مۆبایلەکەت بکەرەوە");
+                document.getElementById('loc-btn').innerText = "📍 لوکەیشن";
+            });
+        }
+    }
+
     function change(btn, val) {
         let parent = btn.closest('.item');
         let name = parent.dataset.name;
@@ -256,9 +296,13 @@
     }
     function send() {
         if (Object.keys(cart).length === 0) { alert("تکایە خواردنێک دیاری بکە!"); return; }
+        if (!userLocation) { alert("تکایە سەرەتا دوگمەی لوکەیشن دابگرە بۆ ناردنی شوێنەکەت"); return; }
+        
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) { msg += `▫️ ${name} (${cart[name].qty} دانە)\n`; }
-        msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*\n📍 تکایە لوکەیشن بنێرە!`;
+        msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
+        msg += `\n📍 *لوکەیشن:* ${userLocation}`;
+        
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
 </script>
