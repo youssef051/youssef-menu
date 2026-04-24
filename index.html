@@ -273,8 +273,8 @@
             document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
             
             navigator.geolocation.getCurrentPosition(function(position) {
-                // گۆڕینی فۆرماتی لوکەیشن بۆ Waze
-                userLocation = "https://waze.com/ul?ll=" + position.coords.latitude + "," + position.coords.longitude + "&navigate=yes";
+                // بەکارهێنانی waze:// بۆ کردنەوەی ڕاستەوخۆی ئەپڵیکەیشنەکە
+                userLocation = "waze://?ll=" + position.coords.latitude + "," + position.coords.longitude + "&navigate=yes";
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
                 document.getElementById('loc-btn').classList.add('active');
             }, function(error) {
