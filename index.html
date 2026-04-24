@@ -308,6 +308,13 @@
     let lat = "";
     let lon = "";
 
+    // ئەم بەشە وادەکات لاپەڕەکە نوێ (Refresh) بێتەوە کاتێک دەگەڕێیتەوە سەری
+    document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === 'visible') {
+            window.location.reload();
+        }
+    });
+
     function showAlert(msg) {
         document.getElementById('alert-msg').innerText = msg;
         document.getElementById('overlay').style.display = 'block';
