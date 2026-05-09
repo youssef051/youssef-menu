@@ -1,0 +1,40 @@
+<!-- بەشی پیشاندانی وێنەی خواردنەکان (Menu Gallery) -->
+<div class="menu-gallery">
+    <!-- وێنەی یەکەم -->
+    <div class="menu-item">
+        <img src="images/p1.jpg" alt="خواردنی ١">
+        <p>ناوی خواردن - ١٠,٠٠٠ دینار</p>
+    </div>
+
+    <!-- وێنەی دووەم -->
+    <div class="menu-item">
+        <img src="images/p2.jpg" alt="خواردنی ٢">
+        <p>ناوی خواردن - ٨,٠٠٠ دینار</p>
+    </div>
+
+    <!-- ئەتوانیت بە هەمان شێوە بۆ وێنەکانی تریش زیادی بکەیت -->
+</div>
+
+<style>
+.menu-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
+    height: 150px;
+}
+
+.menu-item p {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5px;
+    font-weight: bold;
+}
+</style>
