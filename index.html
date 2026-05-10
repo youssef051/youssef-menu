@@ -6,9 +6,8 @@
     <meta name="google" content="notranslate">
     <title>خواردنگەی یوسف | مێنۆی 8D</title>
     
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/gM2cHwSJ/1776997118669.png">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/gM2cHwSJ/1776997118669.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
 
@@ -20,21 +19,16 @@
             --white: #ffffff;
             --tk-red: #ff0050;
             --tk-blue: #00f2ea;
-            --shd-8d: 12px 12px 25px #000000, -6px -6px 20px #252525, inset 1px 1px 2px rgba(255,255,255,0.1);
-            --shd-img: 5px 10px 20px rgba(0,0,0,0.8);
+            --shd-8d: 12px 12px 25px #000000, -6px -6px 20px #252525;
         } 
-
-        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
-        body { top: 0px !important; } 
 
         body {
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg);
             color: var(--white);
             margin: 0;
-            padding-bottom: 240px; 
+            padding-bottom: 250px; 
             direction: rtl;
-            touch-action: manipulation;
         } 
 
         .date-time-bar {
@@ -47,14 +41,13 @@
             font-size: 0.85rem;
             color: var(--gold);
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             position: sticky;
             top: 0;
             z-index: 1001;
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ibb.co/HTKcZZhy/152072.jpg');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.ibb.co/HTKcZZhy/152072.jpg');
             background-size: cover;
             background-position: center;
             height: 180px; 
@@ -63,27 +56,15 @@
             justify-content: center;
             align-items: center;
             border-bottom: 4px solid var(--gold);
-            box-shadow: 0 15px 35px #000;
-        } 
+        }
 
-        header h1 { color: var(--gold); font-size: 2.1rem; margin: 0; text-shadow: 4px 4px 15px #000; } 
-        header p { margin: 5px 0; font-weight: bold; }
-        
-        .phone-display {
-            background: rgba(0,0,0,0.5);
-            padding: 4px 15px;
-            border-radius: 50px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: 8px;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px #000;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            direction: ltr; 
+        .logo-main {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 10px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
 
         .container { padding: 12px; max-width: 500px; margin: auto; } 
@@ -94,11 +75,7 @@
             padding: 12px 18px;
             margin: 25px 0 12px 0;
             border-radius: 12px;
-            font-size: 1.2rem;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
             border-right: 5px solid var(--gold);
             box-shadow: var(--shd-8d);
         } 
@@ -111,91 +88,69 @@
             margin-bottom: 20px;
             border: 1px solid rgba(212, 175, 55, 0.1);
             box-shadow: var(--shd-8d);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
-        
-        .item img { 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 15px; 
-            object-fit: cover; 
-            box-shadow: var(--shd-img);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .item-info { flex: 1; padding: 0 12px; display: flex; flex-direction: column; justify-content: center; }
-        .item-name { font-weight: bold; font-size: 0.95rem; margin-bottom: 4px; text-shadow: 2px 2px 4px #000; }
-        .item-price { color: var(--gold); font-weight: bold; font-size: 1.05rem; letter-spacing: 0.5px; } 
 
-        .controls { display: flex; align-items: center; gap: 10px; }
+        .item img { width: 80px; height: 80px; border-radius: 15px; object-fit: cover; }
+        .item-info { flex: 1; padding: 0 12px; display: flex; flex-direction: column; justify-content: center; }
+        .item-name { font-weight: bold; font-size: 0.95rem; }
+        .item-price { color: var(--gold); font-weight: bold; font-size: 1.05rem; } 
+
+        .controls { display: flex; align-items: center; gap: 8px; }
         .btn-qty {
-            background: linear-gradient(145deg, #333, #111);
+            background: #1a1a1a;
             border: 1px solid var(--gold);
             color: var(--gold);
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
-            font-size: 1.4rem;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            font-size: 1.3rem;
             cursor: pointer;
-            box-shadow: 4px 4px 8px #000, -1px -1px 4px rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
-        .qty { font-size: 1.2rem; font-weight: bold; min-width: 24px; text-align: center; color: #fff; text-shadow: 0 0 5px var(--gold); } 
+        .qty { font-size: 1.1rem; font-weight: bold; min-width: 22px; text-align: center; } 
 
         .footer {
             position: fixed;
             bottom: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.97);
-            backdrop-filter: blur(25px);
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px);
             border-top: 3px solid var(--gold);
-            padding: 20px 25px 45px 25px; 
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            box-sizing: border-box;
+            padding: 15px 20px 40px 20px; 
             z-index: 1000;
-            border-radius: 35px 35px 0 0;
-            box-shadow: 0 -15px 40px rgba(0,0,0,0.9);
+            border-radius: 30px 30px 0 0;
+            box-sizing: border-box;
         } 
 
         .tiktok-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            border-radius: 18px;
-            padding: 15px;
+            gap: 10px;
+            border-radius: 15px;
+            padding: 12px;
             text-decoration: none;
             color: #fff;
             font-weight: bold;
+            margin-bottom: 15px;
             background: linear-gradient(270deg, #000, var(--tk-red), #000, var(--tk-blue));
             background-size: 400% 400%;
             animation: animateGradient 5s ease infinite;
         } 
 
-        @keyframes animateGradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        @keyframes animateGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        .footer-bottom { 
+            display: flex; 
+            flex-direction: row-reverse; 
+            justify-content: space-between; 
+            align-items: center; 
         } 
 
         .btn-order {
             background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
-            padding: 13px 28px;
+            padding: 12px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -205,45 +160,28 @@
         } 
 
         .btn-location {
-            background: linear-gradient(145deg, #222, #000);
+            background: #111;
             border: 1.5px solid var(--gold);
             color: var(--gold);
-            padding: 11px 16px;
-            border-radius: 14px;
-            font-size: 0.9rem;
-            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 0.85rem;
             font-weight: bold;
         }
-        
-        #custom-alert {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #1a1a1a;
-            border: 2px solid var(--gold);
-            padding: 30px;
-            border-radius: 25px;
-            z-index: 2000;
-            width: 80%;
-            text-align: center;
-        }
+        .btn-location.active { background: var(--gold); color: #000; }
     </style>
 </head>
 <body> 
 
 <div class="date-time-bar">
     <span id="current-date">--/--/----</span>
-    <span id="current-time">00:00:00</span>
+    <span id="current-time">00:00:00 AM</span>
 </div>
 
 <header>
-    <h1>خواردنگەی یوسف</h1>
-    <p>باشترین تام و کوالێتی</p>
-    <div class="phone-display">
-        <span>0750 882 6695</span>
-    </div>
+    <img src="https://i.ibb.co/gM2cHwSJ/1776997118669.png" class="logo-main">
+    <h1 style="color:var(--gold); margin:0;">خواردنگەی یوسف</h1>
+    <p style="margin:5px 0; direction: ltr;">+964 750 882 6695</p>
 </header> 
 
 <div class="container">
@@ -252,82 +190,76 @@
     <div class="item" data-name="لحم بالعجين عادي" data-price="1250">
         <img src="https://i.ibb.co/HTKcZZhy/152072.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين عادي</span><span class="item-price">١,٢٥٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
     <div class="item" data-name="لحم بالعجين دبل" data-price="2500">
         <img src="https://i.ibb.co/HTKcZZhy/152072.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين دبل</span><span class="item-price">٢,٥٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
     <div class="item" data-name="لحم بالعجين عادی بە هێلکە" data-price="1500">
         <img src="https://i.ibb.co/xKVfMNp8/images-2.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين عادی بە هێلکە</span><span class="item-price">١,٥٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
     <div class="item" data-name="لحم بالعجين دبل بە هێلکە" data-price="2750">
         <img src="https://i.ibb.co/xKVfMNp8/images-2.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين دبل بە هێلکە</span><span class="item-price">٢,٧٥٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="لحم بالعجين عادی بە پەنیر" data-price="2000">
+    <div class="item" data-name="لحم بالعجين عادی پەنیر" data-price="2000">
         <img src="https://i.ibb.co/4nsstKWW/images-4.jpg">
-        <div class="item-info"><span class="item-name">لحم بالعجين عادی بە پەنیر</span><span class="item-price">٢,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">لحم بالعجين عادی پەنیر</span><span class="item-price">٢,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="لحم بالعجين دبل بە پەنیر" data-price="3500">
+    <div class="item" data-name="لحم بالعجين دبل پەنیر" data-price="3500">
         <img src="https://i.ibb.co/4nsstKWW/images-4.jpg">
-        <div class="item-info"><span class="item-name">لحم بالعجين دبل بە پەنیر</span><span class="item-price">٣,٥٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
-    </div> 
+        <div class="item-info"><span class="item-name">لحم بالعجين دبل پەنیر</span><span class="item-price">٣,٥٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
+    </div>
 
     <div class="category-header">🍕 بەشی پیتزا</div>
 
-    <div class="item" data-name="پیتزای قومبەلە" data-price="10000">
+    <div class="item" data-name="پیتزا قومبەلە" data-price="10000">
         <img src="https://i.ibb.co/NgfNVQ4k/TNT-pizza-637605665536025638301857382739352.jpg">
-        <div class="item-info"><span class="item-name">پیتزای قومبەلە</span><span class="item-price">١٠,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">پیتزا قومبەلە</span><span class="item-price">١٠,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="پیتزای نیو قومبەلە" data-price="5000">
+    <div class="item" data-name="پیتزا نیو قومبەلە" data-price="5000">
         <img src="https://i.ibb.co/NgfNVQ4k/TNT-pizza-637605665536025638301857382739352.jpg">
-        <div class="item-info"><span class="item-name">پیتزای نیو قومبەلە</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">پیتزا نیو قومبەلە</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="پیتزای بچوک" data-price="3000">
+    <div class="item" data-name="پیتزا سینگ بچوک" data-price="3000">
         <img src="https://i.ibb.co/Z6xNJ8MC/Pizzay-Italy-Karzan-Mix-P638520513229913695.jpg">
-        <div class="item-info"><span class="item-name">پیتزای بچوک</span><span class="item-price">٣,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">پیتزا سینگ بچوک</span><span class="item-price">٣,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="پیتزای دبل" data-price="5000">
+    <div class="item" data-name="پیتزا سینگ دبل" data-price="5000">
         <img src="https://i.ibb.co/Z6xNJ8MC/Pizzay-Italy-Karzan-Mix-P638520513229913695.jpg">
-        <div class="item-info"><span class="item-name">پیتزای دبل</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">پیتزا سینگ دبل</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="پیتزای بچوک بە گوشت" data-price="4000">
+    <div class="item" data-name="پیتزا گوشت بچوک" data-price="4000">
         <img src="https://i.ibb.co/nMk7hgWZ/99547.jpg">
-        <div class="item-info"><span class="item-name">پیتزای بچوک بە گوشت</span><span class="item-price">٤,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">پیتزا گوشت بچوک</span><span class="item-price">٤,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div>
 
-    <div class="item" data-name="پیتزای دبل بە گوشت" data-price="6000">
+    <div class="item" data-name="پیتزا گوشت دبل" data-price="6000">
         <img src="https://i.ibb.co/nMk7hgWZ/99547.jpg">
-        <div class="item-info"><span class="item-name">پیتزای دبل بە گوشت</span><span class="item-price">٦,٠٠٠ د.ع</span></div>
-        <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
+        <div class="item-info"><span class="item-name">پیتزا گوشت دبل</span><span class="item-price">٦,٠٠٠ د.ع</span></div>
+        <div class="controls"><button class="btn-qty" onclick="change(this, 1)">+</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, -1)">-</button></div>
     </div> 
-</div> 
-
-<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:1999;"></div>
-<div id="custom-alert">
-    <p id="alert-msg" style="color:#fff; font-weight:bold; margin-bottom:25px;"></p>
-    <button onclick="closeAlert()" style="background:var(--gold); border:none; padding:12px 35px; border-radius:15px; font-weight:bold; cursor:pointer; color:#000;">باشە</button>
 </div> 
 
 <div class="footer">
@@ -336,13 +268,14 @@
     </a> 
 
     <div class="footer-bottom">
-        <div style="display:flex; flex-direction:column;">
-            <span style="font-size:0.85rem; opacity:0.7;">کۆی گشتی</span>
-            <span id="total" style="font-size:1.5rem; color:var(--gold); font-weight:bold;">0 د.ع</span>
-        </div>
-        <div style="display:flex; gap:10px; align-items:center;">
-            <button class="btn-location" id="loc-btn" onclick="getLoc()">📍 لوکەیشن</button>
+        <div style="display:flex; gap:10px;">
             <a href="javascript:void(0)" class="btn-order" onclick="send()">💬 داواکاری</a>
+            <button class="btn-location" id="loc-btn" onclick="getLoc()">📍 لوکەیشن</button>
+        </div>
+        
+        <div style="text-align: left;">
+            <span style="font-size:0.8rem; opacity:0.7; display:block;">کۆی گشتی</span>
+            <span id="total" style="font-size:1.4rem; color:var(--gold); font-weight:bold;">0 د.ع</span>
         </div>
     </div>
 </div> 
@@ -351,37 +284,29 @@
     function updateDateTime() {
         const now = new Date();
         document.getElementById('current-date').innerText = now.toLocaleDateString('en-GB');
-        document.getElementById('current-time').innerText = now.toLocaleTimeString('en-GB');
+        let h = now.getHours();
+        let m = now.getMinutes();
+        let s = now.getSeconds();
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        h = h % 12 || 12;
+        m = m < 10 ? '0'+m : m;
+        s = s < 10 ? '0'+s : s;
+        document.getElementById('current-time').innerText = h + ':' + m + ':' + s + ' ' + ampm;
     }
     setInterval(updateDateTime, 1000);
     updateDateTime();
 
     let cart = {};
-    let lat = "";
-    let lon = ""; 
-
-    function showAlert(msg) {
-        document.getElementById('alert-msg').innerText = msg;
-        document.getElementById('overlay').style.display = 'block';
-        document.getElementById('custom-alert').style.display = 'block';
-    } 
-
-    function closeAlert() {
-        document.getElementById('overlay').style.display = 'none';
-        document.getElementById('custom-alert').style.display = 'none';
-    } 
+    let lat = ""; let lon = ""; 
 
     function getLoc() {
         if (navigator.geolocation) {
-            document.getElementById('loc-btn').innerText = "چاوەڕوان بە...";
-            navigator.geolocation.getCurrentPosition(function(position) {
-                lat = position.coords.latitude;
-                lon = position.coords.longitude;
+            document.getElementById('loc-btn').innerText = "...";
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                lat = pos.coords.latitude; lon = pos.coords.longitude;
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
-            }, function() {
-                showAlert("تکایە GPS چالاکە.");
-                document.getElementById('loc-btn').innerText = "📍 لوکەیشن";
-            });
+                document.getElementById('loc-btn').classList.add('active');
+            }, function() { alert("تکایە GPS چالاک بکە"); });
         }
     } 
 
@@ -404,11 +329,11 @@
     } 
 
     function send() {
-        if (Object.keys(cart).length === 0) { showAlert("تکایە خواردنێک دیاری بکە!"); return; }
+        if (Object.keys(cart).length === 0) { alert("تکایە خواردنێک هەڵبژێرە"); return; }
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) msg += `▫️ ${name} (${cart[name].qty} دانە)\n`;
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
-        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttps://maps.google.com/?q=${lat},${lon}`;
+        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttps://www.google.com/maps?q=${lat},${lon}`;
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
 </script> 
