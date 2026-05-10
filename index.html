@@ -54,7 +54,7 @@
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/header_bg.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ibb.co/HTKcZZhy/152072.jpg');
             background-size: cover;
             background-position: center;
             height: 180px; 
@@ -116,14 +116,6 @@
             overflow: hidden;
         }
         
-        .item::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 50%;
-            background: linear-gradient(rgba(255,255,255,0.05), transparent);
-            pointer-events: none;
-        }
-
         .item img { 
             width: 80px; 
             height: 80px; 
@@ -152,7 +144,6 @@
             align-items: center;
             justify-content: center;
         }
-        .btn-qty:active { box-shadow: inset 3px 3px 6px #000; transform: scale(0.95); }
         
         .qty { font-size: 1.2rem; font-weight: bold; min-width: 24px; text-align: center; color: #fff; text-shadow: 0 0 5px var(--gold); } 
 
@@ -186,7 +177,6 @@
             background: linear-gradient(270deg, #000, var(--tk-red), #000, var(--tk-blue));
             background-size: 400% 400%;
             animation: animateGradient 5s ease infinite;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
         } 
 
         @keyframes animateGradient {
@@ -209,7 +199,6 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -224,24 +213,21 @@
             font-size: 0.9rem;
             cursor: pointer;
             font-weight: bold;
-            box-shadow: 5px 5px 10px #000;
         }
-        .btn-location.active { background: var(--gold); color: #000; box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5); } 
-
+        
         #custom-alert {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: linear-gradient(145deg, #222, #111);
+            background: #1a1a1a;
             border: 2px solid var(--gold);
             padding: 30px;
             border-radius: 25px;
             z-index: 2000;
             width: 80%;
             text-align: center;
-            box-shadow: 0 0 50px #000;
         }
     </style>
 </head>
@@ -256,72 +242,83 @@
     <h1>خواردنگەی یوسف</h1>
     <p>باشترین تام و کوالێتی</p>
     <div class="phone-display">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px;"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
         <span>0750 882 6695</span>
     </div>
 </header> 
 
 <div class="container">
     <div class="category-header">🥘 بەشی لحم بالعجين</div>
+    
     <div class="item" data-name="لحم بالعجين عادي" data-price="1250">
-        <img src="images/p1.jpg">
+        <img src="https://i.ibb.co/HTKcZZhy/152072.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين عادي</span><span class="item-price">١,٢٥٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="لحم بالعجين دبل" data-price="2500">
-        <img src="images/p2.jpg">
+        <img src="https://i.ibb.co/HTKcZZhy/152072.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين دبل</span><span class="item-price">٢,٥٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="لحم بالعجين عادی بە هێلکە" data-price="1500">
-        <img src="images/p3.jpg">
+        <img src="https://i.ibb.co/xKVfMNp8/images-2.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين عادی بە هێلکە</span><span class="item-price">١,٥٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="لحم بالعجين دبل بە هێلکە" data-price="2750">
-        <img src="images/p4.jpg">
+        <img src="https://i.ibb.co/xKVfMNp8/images-2.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين دبل بە هێلکە</span><span class="item-price">٢,٧٥٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="لحم بالعجين عادی بە پەنیر" data-price="2000">
-        <img src="images/p5.jpg">
+        <img src="https://i.ibb.co/4nsstKWW/images-4.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين عادی بە پەنیر</span><span class="item-price">٢,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="لحم بالعجين دبل بە پەنیر" data-price="3500">
-        <img src="images/p6.jpg">
+        <img src="https://i.ibb.co/4nsstKWW/images-4.jpg">
         <div class="item-info"><span class="item-name">لحم بالعجين دبل بە پەنیر</span><span class="item-price">٣,٥٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div> 
 
     <div class="category-header">🍕 بەشی پیتزا</div>
+
     <div class="item" data-name="پیتزای قومبەلە" data-price="10000">
-        <img src="images/p7.jpg">
+        <img src="https://i.ibb.co/NgfNVQ4k/TNT-pizza-637605665536025638301857382739352.jpg">
         <div class="item-info"><span class="item-name">پیتزای قومبەلە</span><span class="item-price">١٠,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="پیتزای نیو قومبەلە" data-price="5000">
-        <img src="images/p8.jpg">
+        <img src="https://i.ibb.co/NgfNVQ4k/TNT-pizza-637605665536025638301857382739352.jpg">
         <div class="item-info"><span class="item-name">پیتزای نیو قومبەلە</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="پیتزای بچوک" data-price="3000">
-        <img src="images/p9.jpg">
+        <img src="https://i.ibb.co/Z6xNJ8MC/Pizzay-Italy-Karzan-Mix-P638520513229913695.jpg">
         <div class="item-info"><span class="item-name">پیتزای بچوک</span><span class="item-price">٣,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="پیتزای دبل" data-price="5000">
-        <img src="images/p10.jpg">
+        <img src="https://i.ibb.co/Z6xNJ8MC/Pizzay-Italy-Karzan-Mix-P638520513229913695.jpg">
         <div class="item-info"><span class="item-name">پیتزای دبل</span><span class="item-price">٥,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="پیتزای بچوک بە گوشت" data-price="4000">
-        <img src="images/p11.jpg">
+        <img src="https://i.ibb.co/nMk7hgWZ/99547.jpg">
         <div class="item-info"><span class="item-name">پیتزای بچوک بە گوشت</span><span class="item-price">٤,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div>
+
     <div class="item" data-name="پیتزای دبل بە گوشت" data-price="6000">
-        <img src="images/p12.jpg">
+        <img src="https://i.ibb.co/nMk7hgWZ/99547.jpg">
         <div class="item-info"><span class="item-name">پیتزای دبل بە گوشت</span><span class="item-price">٦,٠٠٠ د.ع</span></div>
         <div class="controls"><button class="btn-qty" onclick="change(this, -1)">-</button><span class="qty">0</span><button class="btn-qty" onclick="change(this, 1)">+</button></div>
     </div> 
@@ -334,8 +331,7 @@
 </div> 
 
 <div class="footer">
-    <a href="https://www.tiktok.com/@pizza.youssef?_r=1&_t=ZS-95nDjNBNv9h" target="_blank" class="tiktok-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.36-.72.5-.99 1.43-1.09 2.26-.13 1.27.31 2.53 1.29 3.29.96.8 2.27.93 3.43.51 1.1-.4 1.93-1.44 2.22-2.57.17-.65.25-1.33.23-2.01V.02z"/></svg>
+    <a href="https://www.tiktok.com/@pizza.youssef" target="_blank" class="tiktok-btn">
         <span>سەردانی تیکتۆکەکەمان بکە</span>
     </a> 
 
@@ -352,19 +348,10 @@
 </div> 
 
 <script>
-    document.addEventListener("visibilitychange", function() {
-        if (document.visibilityState === "visible") {
-            location.reload();
-        }
-    });
-
     function updateDateTime() {
         const now = new Date();
-        const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
-        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-        
-        document.getElementById('current-date').innerText = now.toLocaleDateString('en-GB', dateOptions);
-        document.getElementById('current-time').innerText = now.toLocaleTimeString('en-GB', timeOptions);
+        document.getElementById('current-date').innerText = now.toLocaleDateString('en-GB');
+        document.getElementById('current-time').innerText = now.toLocaleTimeString('en-GB');
     }
     setInterval(updateDateTime, 1000);
     updateDateTime();
@@ -372,20 +359,6 @@
     let cart = {};
     let lat = "";
     let lon = ""; 
-
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    function playSoftClick() {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(800, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 0.1);
-    }
 
     function showAlert(msg) {
         document.getElementById('alert-msg').innerText = msg;
@@ -405,16 +378,14 @@
                 lat = position.coords.latitude;
                 lon = position.coords.longitude;
                 document.getElementById('loc-btn').innerText = "✅ وەرگیرا";
-                document.getElementById('loc-btn').classList.add('active');
             }, function() {
                 showAlert("تکایە GPS چالاکە.");
                 document.getElementById('loc-btn').innerText = "📍 لوکەیشن";
-            }, { enableHighAccuracy: true });
+            });
         }
     } 
 
     function change(btn, val) {
-        playSoftClick();
         let parent = btn.closest('.item');
         let name = parent.dataset.name;
         let price = parseInt(parent.dataset.price);
@@ -437,7 +408,7 @@
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) msg += `▫️ ${name} (${cart[name].qty} دانە)\n`;
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
-        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttps://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
+        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttps://maps.google.com/?q=${lat},${lon}`;
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
 </script> 
