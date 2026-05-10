@@ -7,7 +7,6 @@
     <title>خواردنگەی یوسف | مێنۆی 8D</title>
     
     <link rel="manifest" href="manifest.json">
-    
     <link rel="icon" type="image/png" href="https://i.ibb.co/gM2cHwSJ/1776997118669.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/gM2cHwSJ/1776997118669.png">
     
@@ -224,7 +223,11 @@
 </div> 
 
 <script>
-    // چالاککردنی سێرڤس وۆرکەر
+    // تەنها یەک جار لێرە پێناسەی دەکەین بۆ ئەوەی کێشە دروست نەبێت
+    let cart = {}; 
+    let lat = ""; 
+    let lon = ""; 
+
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             const swCode = `
@@ -238,20 +241,19 @@
         });
     }
 
-    // --- لێرەدا بەشی ڕیسێت زیاد کراوە ---
+    // ئەم بەشە بەرپرسە لە ڕیسێت بوونەوە کاتێک لاپەڕەکە نوێ دەبێتەوە
     window.onload = function() {
         resetCart();
         updateDateTime();
     };
 
     function resetCart() {
-        cart = {};
+        cart = {}; // سەبەتەکە بەتاڵ دەبێتەوە
         document.querySelectorAll('.qty').forEach(span => {
-            span.innerText = '0';
+            span.innerText = '0'; // هەموو ژمارەکان دەبنەوە بە سفر
         });
-        update();
+        update(); // کۆی گشتی پارە دەبێتەوە بە سفر
     }
-    // ---------------------------------
 
     function updateDateTime() {
         const now = new Date();
@@ -263,7 +265,6 @@
     }
     setInterval(updateDateTime, 1000);
 
-    let cart = {}; let lat = ""; let lon = ""; 
     function getLoc() {
         if (navigator.geolocation) {
             document.getElementById('loc-btn').innerText = "...";
