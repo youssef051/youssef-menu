@@ -1,15 +1,20 @@
 {
+  "short_name": "یوسف",
   "name": "خواردنگەی یوسف",
-  "short_name": "خواردنگەی یوسف",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#d4af37",
   "icons": [
     {
-      "src": "https://i.supaimg.com/aa375ff8-cba9-4631-9948-d2f83ef4a73b/5afaaab5-5507-4172-aad1-747d4296389d.png",
+      "src": "https://i.ibb.co/gM2cHwSJ/1776997118669.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.ibb.co/gM2cHwSJ/1776997118669.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a"
 }
