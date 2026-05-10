@@ -167,18 +167,23 @@
 <script>
     let cart = {}; let lat = ""; let lon = ""; 
 
-    // ئەم بەشە زۆر گرنگە بۆ ڕیسێتکردن لە کاتی Refresh
     function checkReset() {
-        // هەر کاتێک لاپەڕە بارکرا، سەبەتەکە سفر دەکەینەوە
         cart = {};
         document.querySelectorAll('.qty').forEach(span => { span.innerText = '0'; });
         update();
         updateDateTime();
     }
 
-    // ئەگەر وێبگەڕەکە ویستی داتا کۆنەکان بهێنێتەوە، ئێمە لێرەدا ڕێگری لێ دەکەین
+    // --- لێرەدا کۆدە نوێکەم داناوە بۆ ڕیفریش ---
+    document.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === "visible") {
+            location.reload();
+        }
+    });
+
+    // ئەمەش بۆ دڵنیایی زیاتر کە ئەگەر بگەڕێتەوە (Back) ڕیفریش بکات
     window.onpageshow = function(event) {
-        if (event.persisted) {
+        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
             window.location.reload();
         }
     };
@@ -226,7 +231,7 @@
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) msg += `▫️ ${name} (${cart[name].qty} دانە)\n`;
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
-        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttp://googleusercontent.com/maps.google.com/4{lat},${lon}`;
+        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttps://www.google.com/maps?q=${lat},${lon}`;
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
 </script> 
