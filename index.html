@@ -224,10 +224,9 @@
 </div> 
 
 <script>
-    // ڕێگەدان بە سێرڤس وۆرکەر بۆ ئەوەی دوگمەی Install کار بکات
+    // چالاککردنی سێرڤس وۆرکەر
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            // سێرڤس وۆرکەرێکی سادە بۆ پشتیوانی PWA
             const swCode = `
                 self.addEventListener('install', (e) => self.skipWaiting());
                 self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
@@ -239,6 +238,21 @@
         });
     }
 
+    // --- لێرەدا بەشی ڕیسێت زیاد کراوە ---
+    window.onload = function() {
+        resetCart();
+        updateDateTime();
+    };
+
+    function resetCart() {
+        cart = {};
+        document.querySelectorAll('.qty').forEach(span => {
+            span.innerText = '0';
+        });
+        update();
+    }
+    // ---------------------------------
+
     function updateDateTime() {
         const now = new Date();
         document.getElementById('current-date').innerText = now.toLocaleDateString('en-GB');
@@ -247,7 +261,7 @@
         h = h % 12 || 12; m = m < 10 ? '0'+m : m; s = s < 10 ? '0'+s : s;
         document.getElementById('current-time').innerText = h + ':' + m + ':' + s + ' ' + ampm;
     }
-    setInterval(updateDateTime, 1000); updateDateTime();
+    setInterval(updateDateTime, 1000);
 
     let cart = {}; let lat = ""; let lon = ""; 
     function getLoc() {
