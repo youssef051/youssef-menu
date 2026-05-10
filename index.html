@@ -47,52 +47,32 @@
             font-size: 0.85rem;
             color: var(--gold);
             font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 1001;
+            position: sticky; top: 0; z-index: 1001;
         }
 
         header {
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.ibb.co/HTKcZZhy/152072.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 180px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-size: cover; background-position: center; height: 180px; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
             border-bottom: 4px solid var(--gold);
         }
 
         .logo-main {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-            margin-bottom: 10px;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            width: 75px; height: 75px; border-radius: 50%; border: 2px solid var(--gold);
+            margin-bottom: 10px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
 
         .container { padding: 12px; max-width: 500px; margin: auto; } 
 
         .category-header {
-            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
-            color: var(--gold);
-            padding: 12px 18px;
-            margin: 25px 0 12px 0;
-            border-radius: 12px;
-            font-weight: bold;
-            border-right: 5px solid var(--gold);
-            box-shadow: var(--shd-8d);
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d); color: var(--gold);
+            padding: 12px 18px; margin: 25px 0 12px 0; border-radius: 12px;
+            font-weight: bold; border-right: 5px solid var(--gold); box-shadow: var(--shd-8d);
         } 
 
         .item {
-            background: var(--card-gradient);
-            border-radius: 18px;
-            display: flex;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            background: var(--card-gradient); border-radius: 18px; display: flex;
+            padding: 12px; margin-bottom: 20px; border: 1px solid rgba(212, 175, 55, 0.1);
             box-shadow: var(--shd-8d);
         }
 
@@ -103,76 +83,38 @@
 
         .controls { display: flex; align-items: center; gap: 8px; }
         .btn-qty {
-            background: #1a1a1a;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            font-size: 1.3rem;
-            cursor: pointer;
+            background: #1a1a1a; border: 1px solid var(--gold); color: var(--gold);
+            width: 32px; height: 32px; border-radius: 8px; font-size: 1.3rem; cursor: pointer;
         }
-        
         .qty { font-size: 1.1rem; font-weight: bold; min-width: 22px; text-align: center; } 
 
         .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.98);
-            backdrop-filter: blur(20px);
-            border-top: 3px solid var(--gold);
-            padding: 15px 20px 45px 20px; 
-            z-index: 1000;
-            border-radius: 30px 30px 0 0;
-            box-sizing: border-box;
+            position: fixed; bottom: 0; width: 100%; background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(20px); border-top: 3px solid var(--gold);
+            padding: 15px 20px 45px 20px; z-index: 1000; border-radius: 30px 30px 0 0; box-sizing: border-box;
         } 
 
         .tiktok-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border-radius: 15px;
-            padding: 12px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            margin-bottom: 15px;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            border-radius: 15px; padding: 12px; text-decoration: none; color: #fff;
+            font-weight: bold; margin-bottom: 15px;
             background: linear-gradient(270deg, #000, var(--tk-red), #000, var(--tk-blue));
-            background-size: 400% 400%;
-            animation: animateGradient 5s ease infinite;
+            background-size: 400% 400%; animation: animateGradient 5s ease infinite;
         } 
 
         @keyframes animateGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-        .footer-bottom { 
-            display: flex; 
-            flex-direction: row-reverse; 
-            justify-content: space-between; 
-            align-items: center; 
-        } 
+        .footer-bottom { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; } 
 
         .btn-order {
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            background: linear-gradient(135deg, #25d366, #128c7e); color: white;
+            padding: 12px 20px; border-radius: 50px; text-decoration: none;
+            font-weight: bold; display: flex; align-items: center; gap: 8px;
         } 
 
         .btn-location {
-            background: #111;
-            border: 1.5px solid var(--gold);
-            color: var(--gold);
-            padding: 10px 15px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: bold;
+            background: #111; border: 1.5px solid var(--gold); color: var(--gold);
+            padding: 10px 15px; border-radius: 12px; font-size: 0.85rem; font-weight: bold;
         }
         .btn-location.active { background: var(--gold); color: #000; }
     </style>
@@ -223,37 +165,18 @@
 </div> 
 
 <script>
-    // تەنها یەک جار لێرە پێناسەی دەکەین بۆ ئەوەی کێشە دروست نەبێت
-    let cart = {}; 
-    let lat = ""; 
-    let lon = ""; 
+    let cart = {}; let lat = ""; let lon = ""; 
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            const swCode = `
-                self.addEventListener('install', (e) => self.skipWaiting());
-                self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
-                self.addEventListener('fetch', (e) => {});
-            `;
-            const blob = new Blob([swCode], {type: 'text/javascript'});
-            const url = URL.createObjectURL(blob);
-            navigator.serviceWorker.register(url).catch(err => console.log('SW Error:', err));
-        });
+    // ئەم فەنکشنە هەموو کاتێک بانگ دەکرێت کاتێک لاپەڕەکە Refresh دەبێتەوە
+    function resetEverything() {
+        cart = {};
+        document.querySelectorAll('.qty').forEach(span => { span.innerText = '0'; });
+        update();
     }
 
-    // ئەم بەشە بەرپرسە لە ڕیسێت بوونەوە کاتێک لاپەڕەکە نوێ دەبێتەوە
-    window.onload = function() {
-        resetCart();
-        updateDateTime();
-    };
-
-    function resetCart() {
-        cart = {}; // سەبەتەکە بەتاڵ دەبێتەوە
-        document.querySelectorAll('.qty').forEach(span => {
-            span.innerText = '0'; // هەموو ژمارەکان دەبنەوە بە سفر
-        });
-        update(); // کۆی گشتی پارە دەبێتەوە بە سفر
-    }
+    // بەکارهێنانی زیاتر لە ڕێگەیەک بۆ دڵنیابوون لە ڕیسێت
+    window.addEventListener('load', resetEverything);
+    if (performance.navigation.type === 1) { resetEverything(); }
 
     function updateDateTime() {
         const now = new Date();
@@ -263,7 +186,7 @@
         h = h % 12 || 12; m = m < 10 ? '0'+m : m; s = s < 10 ? '0'+s : s;
         document.getElementById('current-time').innerText = h + ':' + m + ':' + s + ' ' + ampm;
     }
-    setInterval(updateDateTime, 1000);
+    setInterval(updateDateTime, 1000); updateDateTime();
 
     function getLoc() {
         if (navigator.geolocation) {
@@ -298,7 +221,7 @@
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) msg += `▫️ ${name} (${cart[name].qty} دانە)\n`;
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
-        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttps://www.google.com/maps?q=${lat},${lon}`;
+        if (lat && lon) msg += `\n\n📍 *لوکەیشن:*\nhttp://maps.google.com/maps?q=${lat},${lon}`;
         window.open("https://wa.me/9647508826695?text=" + encodeURIComponent(msg), "_blank");
     }
 </script> 
