@@ -174,14 +174,12 @@
         updateDateTime();
     }
 
-    // --- لێرەدا کۆدە نوێکەم داناوە بۆ ڕیفریش ---
     document.addEventListener("visibilitychange", function() {
         if (document.visibilityState === "visible") {
             location.reload();
         }
     });
 
-    // ئەمەش بۆ دڵنیایی زیاتر کە ئەگەر بگەڕێتەوە (Back) ڕیفریش بکات
     window.onpageshow = function(event) {
         if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
             window.location.reload();
@@ -227,7 +225,25 @@
     } 
 
     function send() {
+        const now = new Date();
+        const day = now.getDay(); // 0=Sun, 1=Mon, 2=Tue...
+        const hour = now.getHours();
+
+        // 1. پشکنینی ڕۆژی دووشەممە (لە ٣ی بەیانی دووشەممە تا ٣ی بەیانی سێشەممە)
+        // ئەگەر دووشەممە بێت و کاتژمێر ٣ یان زیاتر بێت، یان سێشەممە بێت و کاتژمێر کەمتر لە ٣ بێت
+        if ((day === 1 && hour >= 3) || (day === 2 && hour < 3)) {
+            alert("ببورە روژانی دووشەمە خواردنگەکەمان داخراوە");
+            return;
+        }
+
+        // 2. پشکنینی کاتی ئاسایی (لە ٣ی بەیانی تا ٦ی ئێوارە داخراوە)
+        if (hour >= 3 && hour < 18) {
+            alert("ببورة هيج خواردنيك ئامادة نية");
+            return;
+        }
+
         if (Object.keys(cart).length === 0) { alert("تکایە خواردنێک هەڵبژێرە"); return; }
+        
         let msg = "🍱 *داواکاری نوێ بۆ خواردنگەی یوسف*\n\n";
         for (let name in cart) msg += `▫️ ${name} (${cart[name].qty} دانە)\n`;
         msg += `\n💰 *کۆی گشتی: ${document.getElementById('total').innerText}*`;
