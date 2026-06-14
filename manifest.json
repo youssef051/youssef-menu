@@ -1,20 +1,27 @@
 {
-  "short_name": "یوسف",
   "name": "خواردنگەی یوسف",
+  "short_name": "یوسف",
+  "description": "مێنۆی خواردنگەی یوسف - داواکاری ئۆنلاین",
+  "start_url": "./menu.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "dir": "rtl",
+  "lang": "ku",
   "icons": [
     {
-      "src": "https://i.ibb.co/gM2cHwSJ/1776997118669.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "https://i.ibb.co/gM2cHwSJ/1776997118669.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ],
-  "start_url": "index.html",
-  "display": "standalone",
-  "theme_color": "#0a0a0a",
-  "background_color": "#0a0a0a"
+  ]
 }
