@@ -862,7 +862,7 @@
         const pill = document.getElementById('statusPill');
         const text = document.getElementById('statusText');
         const isMon = (day === 1 && h >= 3) || (day === 2 && h < 3);
-        const isDaytime = h >= 3 && h < 18;
+        const isDaytime = h >= 3 && h < 17;
         if (isMon || isDaytime) {
             pill.className = 'status-pill closed';
             text.innerText = isMon ? 'دووشەمە داخراوە' : 'ئێستا داخراوە';
@@ -983,7 +983,7 @@
             showAlert('😴', 'ڕۆژی پشوو', 'ببورن، ڕۆژی دووشەممە خواردنگەکەمان داخراوە.');
             return;
         }
-        if (h >= 3 && h < 18) {
+        if (h >= 3 && h < 17) {
             showAlert('⏰', 'خواردنگە داخراوە', 'ببورن، ئێستا داواکاری وەرنەگیراوە. لە کاتژمێر ٦ی ئێوارە بەدواوە کراوەتەوەین.');
             return;
         }
@@ -1069,4 +1069,4 @@
 </script>
 
 </body>
-</html>
+</html> 
